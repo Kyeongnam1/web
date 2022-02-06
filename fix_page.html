@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        #com_img{
+            width: 10%;
+        }
+        header{
+            background-color: rosybrown;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            height: 5%;
+           
+        }
+        main{
+            padding-top: 5%;
+            text-align: center;
+            background-color: rgb(158, 158, 158);
+            overflow: hidden;
+        }
+        footer{
+            background-color: blueviolet;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 10%;
+        }
+        #header_button{
+            position:fixed;
+            right:5px;
+        }
+        #company_img{
+            float: left;
+            background-color: blueviolet;
+        }
+        #information{
+            display: block;
+            float: right;
+            background-color: blue;
+            margin-left: 10px;
+        }
+        #name, #review, #reliability{
+            display: block;
+        }
+        nav{
+            text-align: center;
+        }
+        #sec > li{
+            list-style: none;
+            display: inline-block;
+            background-color: yellow;
+        }
+        #company, #navi, #text{
+            display: block;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body> 
+    <header>
+        <div id="header_button">
+            <button type="button" >버튼</button>
+        </div>
+    </header>
+    <main>
+        <section id="company">
+            <div id="company_img">
+                <img src="images/company.jpg" alt="업체" id="com_img">
+            </div>
+            <div id="information">
+                <div id="name">
+                    <label for="">이름</label>
+                </div>
+                <div id="review">
+                    <label for="">리뷰</label>
+                </div>
+                <div id="reliability">
+                    <label for="">신뢰도</label>
+                </div>
+            </div>    
+        </section>
+        <section id="navi">
+            <nav>
+                <ul id="sec">
+                    <li>업체정보</li>
+                    <li>리뷰</li>
+                    <li>QnA</li>
+                </ul>
+            </nav>
+        </section>
+        <section id="text">
+            <textarea name="" id="" cols="30" rows="10">내용</textarea>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <button type="button">버튼</button>
+        </div>
+    </footer>
+</body>
+</html>
