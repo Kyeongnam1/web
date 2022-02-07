@@ -5,7 +5,7 @@
   <title>fix require</title>
   <!--초기화-->
   <style>
-    *{margin: 0; padding: 0;}
+    *{padding: 0; margin: 0;}
   </style>
   <!--헤더-->
   <style>
@@ -16,6 +16,7 @@
       position: relative;
       text-align: center;
       line-height: 45px;
+      
     }
     #main_header > label{
       width: 32px;
@@ -24,6 +25,7 @@
       display: block;
       height: 32px;
       position: absolute;
+     
     }
   </style>
   <!--스프라이트 이미지-->
@@ -42,7 +44,30 @@
       border-radius: 6px;
     }
     form{
-      padding: 10px;
+      padding: 20px;
+    }
+    form > label{
+      margin-left: 1px;
+    }
+  </style>
+  <!--메인-->
+  <style>
+    main{
+      overflow-y: scroll;
+      margin-left: 1px;
+      margin-top: 1px;
+    }
+    input[name = "date"]{
+      margin-top: 20px;
+    }
+  </style>
+  <!--푸터-->
+  <style>
+    #submit{
+      height: 90%;
+      float: right;
+      margin-right: 10px;
+      margin-top: 180px;
     }
   </style>
 </head>
@@ -72,5 +97,20 @@
       <option value="5" >5</option>
     </select>
   </form>
+  <main>
+    <form>
+      <p>
+        <textarea name="detail" cols="49" rows="25" placeholder="상세 증상을 입력해주세요"></textarea>
+      </p>
+      <p>
+        <input type="date" name="date" value="2022-02-09" min="2022-02-09" max="2022-12-31">
+      </p>
+    </form>
+  </main>
+  <footer>
+    <p>
+      <input type="submit" id="submit">
+    </p>
+  </footer>
 </body>
 </html>
