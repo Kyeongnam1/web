@@ -22,7 +22,7 @@
         }
         
         header{
-            background-color: rosybrown;
+            background-color: rgb(206, 207, 212);
             position: fixed;
             height:100px;
             width: 100%;
@@ -39,7 +39,6 @@
 
         main{
             margin-top: 90px;
-            background-color: royalblue;
             text-align: center;
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
@@ -75,7 +74,7 @@
         }
         #menu{
             border-radius: 25px;
-            background-color: blanchedalmond;
+            background-color: rgb(206, 207, 212);
         }
         #menu ul{
             width: 100%;
@@ -89,14 +88,20 @@
             text-align: center;
             list-style: none;
         }
-        #text{
-            float: left;
+        a:active{
+            color: rgb(139, 139, 177);
         }
-        
-        /*h1, p{float: left;}*/
+        #text{
+            text-align: left;
+        }
+        h1, h2, p{
+            font-size: 200%;
+            line-height: 200%;
+            letter-spacing: 1px;
+        }
 
         footer{
-            background-color: blueviolet;
+            background-color: rgb(206, 207, 212);
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             position: fixed;
@@ -158,20 +163,37 @@
         <section id="text">
             <div id="information">
                 <h1>업체정보</h1>
-                <p>수원에 있습니다. 수원에 있습니다.수원에 있습니다.수원에 있습니다.</p>
-                <h1>사진</h1>
+                <hr>
+                <br>
                 <div id="picc"><img src="images/4.jpg" alt="4"></div>
-               
+                <p>수원에 있습니다. 수원에 있습니다.수원에 있습니다. 수원에 있습니다.수원에 있습니다. 수원에 있습니다.수원에 있습니다.수원에 있습니다.</p>
+                
             </div>
 
             <div id="review" style="display:none">
-                <h1>review</h1>
-                <p>리뷰입니다</p>
+                <h1>리뷰</h1>
+                <hr>
+                <br>
+                <div id="wholerate">
+                    <h1 style="font-size: 400%; display:inline;">5.0</h1><p style="display:inline;">&nbsp;&nbsp;⭐⭐⭐⭐⭐</p>
+                </div>
+                <hr>
+                <br>
+                <div id="rate">
+                    <h2 style="display:inline;">김*남</h2> <p style="display:inline;">&nbsp;&nbsp;⭐⭐⭐⭐⭐</p>
+                    <p style="color:gray">추천합니다.</p>
+                </div>
             </div>
             
             <div id="qna" style="display:none">
-                <h1>qna</h1>
-                <p>qna입니다.</p>
+                <h1>QnA</h1>
+                <hr>
+                <br>
+                <div id="answer">
+                    <h2>Q. 몇살이세요?</h2>
+                    <p style="color:gray">25살입니다.</p>
+                </div>
+                
             </div>  
         </section>
     </main>
