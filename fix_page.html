@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Document</title>
+    
     <style>
         *{
             margin: 0; padding: 0;
@@ -10,7 +11,7 @@
             height: 100%;
             min-height: 100%;
         }
-
+        
         body {
             display: flex;
             flex-direction: column;
@@ -22,6 +23,7 @@
         
         header{
             background-color: rosybrown;
+            position: fixed;
             height:100px;
             width: 100%;
             overflow: hidden;
@@ -36,11 +38,14 @@
         }
 
         main{
+            margin-top: 90px;
             background-color: royalblue;
             text-align: center;
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
             flex: auto;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
         }
         section{
             text-align: center;
@@ -64,6 +69,10 @@
             margin:0px;
             padding:0px;
         }
+        #nav{
+            position: sticky;
+            top:100px;
+        }
         #menu{
             border-radius: 25px;
             background-color: blanchedalmond;
@@ -80,10 +89,11 @@
             text-align: center;
             list-style: none;
         }
-        textarea{
-            width: 90%;
-            border-radius: 10px;
+        #text{
+            float: left;
         }
+        
+        /*h1, p{float: left;}*/
 
         footer{
             background-color: blueviolet;
@@ -113,7 +123,8 @@
         <div id="header_button">
             <button type="button" >버튼</button>
         </div>
-    </header>
+    </header> 
+
     <main>
         <section>
             <table>
@@ -134,24 +145,76 @@
             </table>
         </section>
 
-        <section>
-            <div id="menu">
+        <section id="nav">
+            <nav id="menu">
                 <ul>
-                    <li><a href="#">업체정보</a></li>
-                    <li><a href="#">리뷰</a></li>
-                    <li><a href="#">QnA</a></li>
+                    <li><a onclick="hideshow1()">업체정보</a></li>
+                    <li><a onclick="hideshow2()">리뷰</a></li>
+                    <li><a onclick="hideshow3()">QnA</a></li>
                 </ul>
-            </div>
+            </nav>
         </section>
 
-        <section>
-            <textarea name="" id="" cols="100" rows="40">내용</textarea>
+        <section id="text">
+            <div id="information">
+                <h1>업체정보</h1>
+                <p>수원에 있습니다. 수원에 있습니다.수원에 있습니다.수원에 있습니다.</p>
+                <h1>사진</h1>
+                <div id="picc"><img src="images/4.jpg" alt="4"></div>
+               
+            </div>
+
+            <div id="review" style="display:none">
+                <h1>review</h1>
+                <p>리뷰입니다</p>
+            </div>
+            
+            <div id="qna" style="display:none">
+                <h1>qna</h1>
+                <p>qna입니다.</p>
+            </div>  
         </section>
     </main>
+
     <footer>
         <div id="footer_button">
             <button type="button" >버튼</button>
         </div>
     </footer>
 </body>
+<script>
+    /*
+    var c = doucument.querySelector("qna");
+    c.addEventListener("click",scrollWindow2);
+
+    function click(){
+        var location = document.querySelector("#qna").offsetTop;
+        window.scrollTo({top:location, behavior:'smooth'});
+    }
+    function scrollWindow2()
+    {
+        window.scrollTo(0,1500);
+    }
+
+    var moveToTopSmooth = function() {
+    document.body.scrollIntoView({ behavior: 'smooth' });
+    };*/
+
+    function hideshow1(){
+        document.getElementById("information").style.display = "block";
+        document.getElementById("review").style.display = "none";
+        document.getElementById("qna").style.display = "none";
+    }
+    function hideshow2(){
+        document.getElementById("information").style.display = "none";
+        document.getElementById("review").style.display = "block";
+        document.getElementById("qna").style.display = "none";
+    }
+    function hideshow3(){
+        document.getElementById("information").style.display = "none";
+        document.getElementById("review").style.display = "none";
+        document.getElementById("qna").style.display = "block";
+    }
+
+</script>
 </html>
