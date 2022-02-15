@@ -69,30 +69,19 @@
             margin:0px;
             padding:0px;
         }
-        #nav{
-            position: sticky;
-            top:100px;
+
+        progress{
+            width:100%;
+            
         }
-        #menu{
-            border-radius: 25px;
-            background-color: rgb(206, 207, 212);
+        #bar2{
+            display: flex;
         }
-        #menu ul{
-            width: 100%;
-            overflow: hidden;
+        #bar_text1, #bar_text2, #bar_text3, #bar_text4 {
+            width:25%;
         }
-        #menu ul li{
-            float:left;
-            width:33.33%;
-            height: 100px;
-            line-height: 100px;;
-            text-align: center;
-            list-style: none;
-        }
-        a:active{
-            color: rgb(139, 139, 177);
-        }
-        #text{
+
+        #request{
             text-align: left;
         }
         h1, h2, p{
@@ -100,6 +89,7 @@
             line-height: 200%;
             letter-spacing: 1px;
         }
+       
 
         footer{
             background-color: rgb(206, 207, 212);
@@ -113,14 +103,17 @@
         }
         #footer_button{
             margin: auto;  
-            width:95%;
-            text-align: center;
+            width:100%;
             height:90%;
+            text-align: center;
         }
         button{
             border-radius: 10px;
             width:100%;
             height:100%;
+        }
+        #foot{
+            width:19%;
         }
     </style>
 </head>
@@ -139,73 +132,73 @@
                     <col>
                 </colgroup>
                 <tr>
-                    <td rowspan="3"><img src="images/icon.png" alt="업체" id="com_img"></td>
-                    <td>상호명</td> 
+                    <td rowspan="2"><img src="images/icon.png" alt="업체" id="com_img"></td>
+                    <td>업체명</td> 
                 </tr>
                 <tr>
-                    <td>리뷰수</td>
-                </tr>
-                <tr>
-                    <td>신뢰도</td>
+                    <td>방문시간</td>
                 </tr>
             </table>
         </section>
 
-        <section id="nav">
-            <nav id="menu">
-                <ul>
-                    <li><a onclick="hideshow1()">업체정보</a></li>
-                    <li><a onclick="hideshow2()">리뷰</a></li>
-                    <li><a onclick="hideshow3()">QnA</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <section id="text">
-            <div id="information">
-                <h1>업체정보</h1>
-                <hr>
-                <br>
-                <div id="picc"><img src="images/4.jpg" alt="4"></div>
-                <p>수원에 있습니다. 수원에 있습니다.수원에 있습니다. 수원에 있습니다.수원에 있습니다. 수원에 있습니다.수원에 있습니다.수원에 있습니다.</p>
-                
+        <section>
+            <div id="bar">
+                <progress id="progress" value="75" max="100"></progress>
             </div>
-
-            <div id="review" style="display:none">
-                <h1>리뷰</h1>
-                <hr>
-                <br>
-                <div id="wholerate">
-                    <h1 style="font-size: 400%; display:inline;">5.0</h1><p style="display:inline;">&nbsp;&nbsp;⭐⭐⭐⭐⭐</p>
+            <div id="bar2">
+                <div id="bar_text1">
+                    <p>접수중</p>
                 </div>
-                <hr>
-                <br>
-                <div id="rate">
-                    <h2 style="display:inline;">김*남</h2> <p style="display:inline;">&nbsp;&nbsp;⭐⭐⭐⭐⭐</p>
-                    <p style="color:gray">추천합니다.</p>
+                <div id="bar_text2">
+                    <p>수리중</p> 
+                </div>
+                <div id="bar_text3">
+                    <p>수리완료</p> 
+                </div>
+                <div id="bar_text4">
+                    <p>배송완료</p>
                 </div>
             </div>
             
-            <div id="qna" style="display:none">
-                <h1>QnA</h1>
-                <hr>
-                <br>
-                <div id="answer">
-                    <h2>Q. 몇살이세요?</h2>
-                    <p style="color:gray">25살입니다.</p>
-                </div>
-                
-            </div>  
+            
+        </section>
+
+        <section id="request">
+            <h1>요청내용</h1>
+            <hr>
+            <br>
+            <p>고객님의 요청내용입니다.</p>
         </section>
     </main>
 
     <footer>
         <div id="footer_button">
-            <button type="button" >버튼</button>
+            <button type="button" id="foot" onclick="javascript:alert(a);">버튼</button>
+            <button type="button" id="foot">버튼</button>
+            <button type="button" id="foot">버튼</button>
+            <button type="button" id="foot">버튼</button>
+            <button type="button" id="foot">버튼</button>
         </div>
     </footer>
 </body>
 <script>
+    var a = document.getElementById('progress').value;
+    var b1 = document.getElementById('bar_text1').style;
+    var b2 = document.getElementById('bar_text2').style;
+    var b3 = document.getElementById('bar_text3').style;
+    var b4 = document.getElementById('bar_text4').style;
+
+    if(a==25){
+        b1.fontWeight = 'bold';
+    }else if(a==50){
+        b2.fontWeight = 'bold';
+    }else if(a==75){
+        b3.fontWeight = 'bold';
+    }else if(a==100){
+        b4.fontWeight = 'bold';
+    }
+    
+
     /*
     var c = doucument.querySelector("qna");
     c.addEventListener("click",scrollWindow2);
