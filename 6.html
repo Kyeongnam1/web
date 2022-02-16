@@ -39,8 +39,7 @@
 
         main{
             margin-top: 90px;
-            text-align: center;
-            background-color: rgb(250, 247, 236);
+            text-align: center;                                  
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
             flex: auto;
@@ -141,9 +140,11 @@
             </table>
         </section>
 
-        <section>
+        <section style="text-align: left;">
+            <h1>진행상황</h1>
+            <br>
             <div id="bar">
-                <progress id="progress" value="75" max="100"></progress>
+                <progress id="progress" value="64" max="100"></progress>
             </div>
             <div id="bar2">
                 <div id="bar_text1">
@@ -188,49 +189,14 @@
     var b3 = document.getElementById('bar_text3').style;
     var b4 = document.getElementById('bar_text4').style;
 
-    if(a==25){
+    if(a>=0 && a<=25){
         b1.fontWeight = 'bold';
-    }else if(a==50){
+    }else if(a>25 && a<=50){
         b2.fontWeight = 'bold';
-    }else if(a==75){
+    }else if(a>50 && a<=75){
         b3.fontWeight = 'bold';
-    }else if(a==100){
+    }else if(a>75 && a<=100){
         b4.fontWeight = 'bold';
     }
-    
-
-    /*
-    var c = doucument.querySelector("qna");
-    c.addEventListener("click",scrollWindow2);
-
-    function click(){
-        var location = document.querySelector("#qna").offsetTop;
-        window.scrollTo({top:location, behavior:'smooth'});
-    }
-    function scrollWindow2()
-    {
-        window.scrollTo(0,1500);
-    }
-
-    var moveToTopSmooth = function() {
-    document.body.scrollIntoView({ behavior: 'smooth' });
-    };*/
-
-    function hideshow1(){
-        document.getElementById("information").style.display = "block";
-        document.getElementById("review").style.display = "none";
-        document.getElementById("qna").style.display = "none";
-    }
-    function hideshow2(){
-        document.getElementById("information").style.display = "none";
-        document.getElementById("review").style.display = "block";
-        document.getElementById("qna").style.display = "none";
-    }
-    function hideshow3(){
-        document.getElementById("information").style.display = "none";
-        document.getElementById("review").style.display = "none";
-        document.getElementById("qna").style.display = "block";
-    }
-
 </script>
 </html>
