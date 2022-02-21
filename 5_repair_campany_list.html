@@ -124,7 +124,7 @@
       background-color: white;
       align-content: center; 
     }
-		.BottomMenu > div { float:left; width: 25%; height: 100%; text-align:center; padding-top: 1px; }
+		.BottomMenu > div { float:left; width: 20%; height: 100%; text-align:center; padding-top: 1px; }
 	
   </style>
 </head>
@@ -156,21 +156,42 @@
         <option value="16">전북</option>
         <option value="17">부산</option>
       </select>
-      <select name="" id="state">
+      <select name="" id="state" onchange="changeSelection(this)">
         <option>군/구 선택</option>
       </select>
     </div>
   </div>
   
   <article>
-    <div class="company-list-item">
+    <div class="company-list-item" data-state="의정부시">
       <a href="">
         <div class="search-pro-item">
           <div class="company-image">
             <div data-name="image" class="square">
               <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
               <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터</h5>
+                <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
+                <h5 class="company-review-count">리뷰수 (1154)</h5>
+                <div data-v-1169 class="company-reviw-rate">
+                  <img data-v-1169 src="./image/star.png">
+                  <span data-v-1169 class="rate">4.7</span>
+                  <span data-v-1169 class="count">(1154)</span>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="company-list-item" data-state="강동구">
+      <a href="">
+        <div class="search-pro-item">
+          <div class="company-image">
+            <div data-name="image" class="square">
+              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+              <div class="company-info">
+                <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
                 <h5 class="company-review-count">리뷰수 (1154)</h5>
                 <div data-v-1169 class="company-reviw-rate">
                   <img data-v-1169 src="./image/star.png">
@@ -186,14 +207,14 @@
         
       </a>
     </div>
-    <div class="company-list-item">
+    <div class="company-list-item" data-state="의정부시">
       <a href="">
         <div class="search-pro-item">
           <div class="company-image">
             <div data-name="image" class="square">
               <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
               <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터</h5>
+                <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
                 <h5 class="company-review-count">리뷰수 (1154)</h5>
                 <div data-v-1169 class="company-reviw-rate">
                   <img data-v-1169 src="./image/star.png">
@@ -209,14 +230,14 @@
         
       </a>
     </div>
-    <div class="company-list-item">
+    <div class="company-list-item" data-state="의정부시">
       <a href="">
         <div class="search-pro-item">
           <div class="company-image">
             <div data-name="image" class="square">
               <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
               <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터</h5>
+                <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
                 <h5 class="company-review-count">리뷰수 (1154)</h5>
                 <div data-v-1169 class="company-reviw-rate">
                   <img data-v-1169 src="./image/star.png">
@@ -232,61 +253,14 @@
         
       </a>
     </div>
-    <div class="company-list-item">
+    <div class="company-list-item" data-state="강동구">
       <a href="">
         <div class="search-pro-item">
           <div class="company-image">
             <div data-name="image" class="square">
               <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
               <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터</h5>
-                <h5 class="company-review-count">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
-                </div>
-  
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        
-      </a>
-    </div>
-    <div class="company-list-item">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터</h5>
-                <h5 class="company-review-count">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
-                </div>
-  
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        
-      </a>
-    </div>
-    
-    <div class="company-list-item">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터</h5>
+                <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
                 <h5 class="company-review-count">리뷰수 (1154)</h5>
                 <div data-v-1169 class="company-reviw-rate">
                   <img data-v-1169 src="./image/star.png">
@@ -303,14 +277,38 @@
       </a>
     </div>
     
-    <div class="company-list-item">
+    <div class="company-list-item" data-state="강동구">
       <a href="">
         <div class="search-pro-item">
           <div class="company-image">
             <div data-name="image" class="square">
               <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
               <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터</h5>
+                <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
+                <h5 class="company-review-count">리뷰수 (1154)</h5>
+                <div data-v-1169 class="company-reviw-rate">
+                  <img data-v-1169 src="./image/star.png">
+                  <span data-v-1169 class="rate">4.7</span>
+                  <span data-v-1169 class="count">(1154)</span>
+                </div>
+  
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </a>
+    </div>
+    
+    <div class="company-list-item" data-state="의정부시">
+      <a href="">
+        <div class="search-pro-item">
+          <div class="company-image">
+            <div data-name="image" class="square">
+              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+              <div class="company-info">
+                <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
                 <h5 class="company-review-count">리뷰수 (1154)</h5>
                 <div data-v-1169 class="company-reviw-rate">
                   <img data-v-1169 src="./image/star.png">
@@ -330,16 +328,19 @@
 
   <footer class="BottomMenu">
     <div>
-      <img src="image/menu.png" alt="수리업체목록" width="25%" height="50%" style="align-items: center;">
+      <img src="" alt="메뉴1" width="20%" height="50%" style="align-items: center;">
     </div>
     <div>
-      <img src="image/repair_request.png" alt="수리요청" width="25%" height="50%" style="align-items: center;">
+      <img src="" alt="메뉴2" width="20%" height="50%" style="align-items: center;">
     </div>
     <div>
-      <img src="image/request_document.png" alt="견적서 확인" width="25%" height="50%" style="align-items: center;">
+      <img src="" alt="메뉴3" width="20%" height="50%" style="align-items: center;">
     </div>
     <div>
-      <img src="image/profile.png" alt="마이페이지" width="25%" height="50%" style="align-items: center;">
+      <img src="" alt="메뉴4" width="20%" height="50%" style="align-items: center;">
+    </div>
+    <div>
+      <img src="" alt="메뉴5" width="20%" height="50%" style="align-items: center;">
     </div>
   </footer>
 </body>
@@ -347,7 +348,6 @@
   function categoryChange(e){
     const state = document.getElementById("state");
     const company = document.getElementById("RepairCampany");
-    const stateName = document.getElementsByClassName("")
 
 
     
@@ -430,11 +430,39 @@
 
     state.options.length = 1;
 
+    //세부 지역 생성
+
     for(property in add){
       let opt = document.createElement("option");
       opt.value = add[property];
       opt.innerHTML = add[property];
       state.appendChild(opt);
+    }
+
+    
+  }
+  
+
+  function changeSelection(e){
+    let state_arr = [];
+    let st3 = document.querySelectorAll(".company-list-item");
+
+    for(var i = 0; i<st3.length;i++){
+      state_arr[i] = st3[i].dataset.state;
+    }
+
+    for(var i = 0; i<state_arr.length; i++){
+      st3[i].style.display="block";
+    }
+
+    for(var i = 0; i<state_arr.length; i++){
+      if(e.value == state_arr[i]){
+      st3[i].style.visibility="visible";
+      }
+      else{
+        st3[i].style.visibility="hidden";
+        st3[i].style.display = "none";
+      }
     }
   }
 </script>
