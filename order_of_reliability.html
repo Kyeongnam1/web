@@ -106,7 +106,7 @@
       border-radius: 0px;
       -webkit-appearance: none;
       -moz-appearance: none;
-      appearance: none;
+      /* appearance: none; */
     }
     select::-ms-expand {
     display: none;
@@ -126,6 +126,10 @@
     }
 		.BottomMenu > div { float:left; width: 20%; height: 100%; text-align:center; padding-top: 1px; }
 	
+    ul{
+      list-style: none;
+      padding-left: 0px;
+    }
   </style>
 </head>
 
@@ -159,168 +163,195 @@
       <select name="" id="state" onchange="changeSelection(this)">
         <option>군/구 선택</option>
       </select>
+
+      <select name="order_by" onchange="orderBySelection(this)">
+        <option value="1">리뷰수</option>
+        <option value="2">신뢰도</option>
+      </select>
     </div>
   </div>
   
   <article>
-    <div class="company-list-item" data-state="의정부시">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
-                <h5 class="company-review-count" data-review="1154">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate" data-rate="4.7">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
+    <ul id="lists" >
+      <li class="list_data" data-rate=4.7 data-review=1154>
+        <div class="company-list-item" data-state="의정부시">
+          <a href="">
+            <div class="search-pro-item">
+              <div class="company-image">
+                <div data-name="image" class="square">
+                  <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+                  <div class="company-info">
+                    <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
+                    <h5 class="company-review-count" data-review="1154">리뷰수 (1154)</h5>
+                    <div data-v-1169 class="company-reviw-rate">
+                      <img data-v-1169 src="./image/star.png">
+                      <span data-v-1169 class="rate" data-rate="4.7">4.7</span>
+                      <span data-v-1169 class="count">(1154)</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
-      </a>
-    </div>
-    <div class="company-list-item" data-state="강동구">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
-                <h5 class="company-review-count">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
+      </li>
+      
+      <li class="list_data" data-rate=3.5 data-review=1475>
+        <div class="company-list-item" data-state="강동구">
+          <a href="">
+            <div class="search-pro-item">
+              <div class="company-image">
+                <div data-name="image" class="square">
+                  <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+                  <div class="company-info">
+                    <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
+                    <h5 class="company-review-count" data-review="1156">리뷰수 (1156)</h5>
+                    <div data-v-1169 class="company-reviw-rate">
+                      <img data-v-1169 src="./image/star.png">
+                      <span data-v-1169 class="rate" data-rate="4.6">4.6</span>
+                      <span data-v-1169 class="count">(1154)</span>
+                    </div>
+      
+                  </div>
                 </div>
-  
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        
-      </a>
-    </div>
-    <div class="company-list-item" data-state="의정부시">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
-                <h5 class="company-review-count">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </a>
-    </div>
-    <div class="company-list-item" data-state="의정부시">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
-                <h5 class="company-review-count">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
-                </div>
-  
+                
               </div>
             </div>
             
-          </div>
+          </a>
         </div>
-        
-      </a>
-    </div>
-    <div class="company-list-item" data-state="강동구">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
-                <h5 class="company-review-count">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
+      </li>
+      
+      <li class="list_data" data-rate=5.0 data-review=108>
+        <div class="company-list-item" data-state="의정부시">
+          <a href="">
+            <div class="search-pro-item">
+              <div class="company-image">
+                <div data-name="image" class="square">
+                  <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+                  <div class="company-info">
+                    <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
+                    <h5 class="company-review-count" data-review="1045">리뷰수 (1045)</h5>
+                    <div data-v-1169 class="company-reviw-rate">
+                      <img data-v-1169 src="./image/star.png">
+                      <span data-v-1169 class="rate" data-rate="3.6">3.6</span>
+                      <span data-v-1169 class="count">(1154)</span>
+                    </div>
+                  </div>
                 </div>
-  
               </div>
             </div>
             
-          </div>
+          </a>
         </div>
-        
-      </a>
-    </div>
+      </li>
+      
+      <li class="list_data" data-rate=3.9 data-review=885>
+        <div class="company-list-item" data-state="의정부시">
+          <a href="">
+            <div class="search-pro-item">
+              <div class="company-image">
+                <div data-name="image" class="square">
+                  <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+                  <div class="company-info">
+                    <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
+                    <h5 class="company-review-count" data-review="954">리뷰수 (954)</h5>
+                    <div data-v-1169 class="company-reviw-rate">
+                      <img data-v-1169 src="./image/star.png">
+                      <span data-v-1169 class="rate" data-rate="2.5">2.5</span>
+                      <span data-v-1169 class="count">(1154)</span>
+                    </div>
+      
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </a>
+        </div>
+      </li>
+      
+      <li class="list_data" data-rate=4.8 data-review=445>
+        <div class="company-list-item" data-state="강동구">
+          <a href="">
+            <div class="search-pro-item">
+              <div class="company-image">
+                <div data-name="image" class="square">
+                  <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+                  <div class="company-info">
+                    <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
+                    <h5 class="company-review-count" data-review="774">리뷰수 (774)</h5>
+                    <div data-v-1169 class="company-reviw-rate">
+                      <img data-v-1169 src="./image/star.png">
+                      <span data-v-1169 class="rate" data-rate="5.0">5.0</span>
+                      <span data-v-1169 class="count">(1154)</span>
+                    </div>
+      
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </a>
+        </div>
+      </li>
+      
+      <li class="list_data" data-rate=4.1 data-review=800>
+        <div class="company-list-item" data-state="강동구">
+          <a href="">
+            <div class="search-pro-item">
+              <div class="company-image">
+                <div data-name="image" class="square">
+                  <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+                  <div class="company-info">
+                    <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
+                    <h5 class="company-review-count" data-review="800">리뷰수 (800)</h5>
+                    <div data-v-1169 class="company-reviw-rate">
+                      <img data-v-1169 src="./image/star.png">
+                      <span data-v-1169 class="rate" data-rate=4.1>4.1</span>
+                      <span data-v-1169 class="count">(1154)</span>
+                    </div>
+      
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </a>
+        </div>
+      </li>
+      
+      
+      <li class="list_data" data-rate=3.2 data-review=145>
+        <div class="company-list-item" data-state="의정부시">
+          <a href="">
+            <div class="search-pro-item">
+              <div class="company-image">
+                <div data-name="image" class="square">
+                  <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
+                  <div class="company-info">
+                    <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
+                    <h5 class="company-review-count" data-review=145>리뷰수 (145)</h5>
+                    <div data-v-1169 class="company-reviw-rate">
+                      <img data-v-1169 src="./image/star.png">
+                      <span data-v-1169 class="rate" data-rate=3.2>3.2</span>
+                      <span data-v-1169 class="count">(1154)</span>
+                    </div>
+      
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </a>
+        </div>
+      </li>
+    </ul>
     
-    <div class="company-list-item" data-state="강동구">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터 강동구점</h5>
-                <h5 class="company-review-count">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
-                </div>
-  
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        
-      </a>
-    </div>
-    
-    <div class="company-list-item" data-state="의정부시">
-      <a href="">
-        <div class="search-pro-item">
-          <div class="company-image">
-            <div data-name="image" class="square">
-              <img data-name="company-img" src="./image/sample.png" width="25%" height="25%">
-              <div class="company-info">
-                <h5 class="company-name">낭만 컴퓨터 의정부점</h5>
-                <h5 class="company-review-count">리뷰수 (1154)</h5>
-                <div data-v-1169 class="company-reviw-rate">
-                  <img data-v-1169 src="./image/star.png">
-                  <span data-v-1169 class="rate">4.7</span>
-                  <span data-v-1169 class="count">(1154)</span>
-                </div>
-  
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        
-      </a>
-    </div>
   </article>
 
   <footer class="BottomMenu">
@@ -371,7 +402,7 @@
     if(e.value == "0"){
       add = nationwide;
       document.getElementById("state").disabled = true;
-      
+
     }else if(e.value == "1"){
       add = seoul;
       document.getElementById("state").disabled = false;
@@ -441,31 +472,76 @@
   
 
   function changeSelection(e){
+   
     let state_arr = [];
     let st3 = document.querySelectorAll(".company-list-item");
-    
 
     for(var i = 0; i<st3.length;i++){
       state_arr[i] = st3[i].dataset.state;
     }
 
-
-    // 초기화
     for(var i = 0; i<state_arr.length; i++){
       st3[i].style.display="block";
     }
 
-    //조건에 맞으면 보여주기
     for(var i = 0; i<state_arr.length; i++){
       if(e.value == state_arr[i]){
       st3[i].style.visibility="visible";
       }
-      //안맞으면 사라지게 하기
       else{
         st3[i].style.visibility="hidden";
         st3[i].style.display = "none";
       }
     }
   }
+
+
+  function orderBySelection(e){
+    console.log(e.value);
+    console.log(typeof(e.value));
+
+    let review_arr = [];
+    let rate_arr = [];
+    let company_arr = [];
+
+    let company_div = document.querySelectorAll(".list_data");
+    let review_div = document.querySelectorAll(".list_data");
+    let rate_div = document.querySelectorAll(".list_data");
+    let parent = document.getElementById("lists");
+    
+
+    console.log(review_div);
+    console.log(rate_div);
+    console.log(company_div);
+    //parent.insertBefore(company_div[2], parent.childNodes[0]);
+
+    for(var i=0; i<review_div.length; i++){
+      review_arr[i] = review_div[i].dataset.review;
+    }
+    for(var i =0; i<rate_div.length; i++){
+      rate_arr[i] = rate_div[i].dataset.rate;
+     }
+
+    if(e.value == "1"){
+      console.log(reviewSort(review_arr[0],review_arr[1]));
+
+      if(reviewSort(review_arr[0],review_arr[1]) == 1){
+        parent.insertBefore(company_div[0], parent.childNodes[0]);
+      }else{
+        parent.insertBefore(company_div[1], parent.childNodes[0]);
+      }
+      
+    }
+
+   }
+
+  function reviewSort(r1, r2){
+    if(r1 > r2){
+      return true;
+    }else{
+      return false;
+    }
+  }
 </script>
+
 </html>
