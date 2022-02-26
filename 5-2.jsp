@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,7 +76,6 @@
       flex: auto;
     }
     #form2{
-
      font-size: 20px;
      height: 60%;
     }
@@ -82,15 +83,16 @@
       width: 100%;
       overflow-y: scroll;
       position: relative;
-      left: -30px;
+      left: -25px;
     }
     #detail{
         width: 80%;
     }
     #sec2{
       position: relative;
-      left: -30px;  
+      left: -25px;  
     }
+
   </style>
   <!--푸터-->
   <style>
@@ -128,7 +130,7 @@
      <button type="button">x</button>
   </header>
   <main>
-    <form id="form1" method="get" action="5-3.jsp">
+    <form id="form1" method="post" action="5-3.jsp">
       <label for="symptom">고장 증상</label>
       <select name="symptom" id="symptom" size='1'>
         <option value="" selected>선택</option>

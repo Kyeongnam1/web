@@ -1,0 +1,37 @@
+<html>
+<head>
+<script language="javascript">
+
+function getRequestBody(oForm) {
+	var aParams = new Array();
+
+	for (var i=0; i<oForm.elements.length; i++) {
+		var data = encodeURIComponent(oForm.elements[i].name);
+		data += "=";
+		data += encodeURIComponent(oForm.elements[i].value);
+		aParams.push(data)
+	}
+
+	return aParams.join("&");
+}	
+
+function test() {
+	var data = "";
+
+	data = getRequestBody(document.forms[0]);
+
+	alert(data);
+}
+</script>
+</head>
+
+<body onload="test()">
+
+<form name="frmtest">
+	<input type=hidden name="name" value="mini"/>
+	<input type=hidden name="title" value="xml"/>
+	<input type=hidden name="date" value="20080613"/>
+</form>
+
+</body>
+</html>
