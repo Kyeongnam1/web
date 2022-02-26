@@ -77,6 +77,9 @@
       margin:0px;
       padding:0px;
     }
+    #print{
+      margin-top: 10px;
+    }
   </style>
   <!--푸터-->
   <style>
@@ -131,7 +134,7 @@
         </section>
         <form>
             <section>
-                <textarea id="" cols="46" rows="30">
+                <textarea id="print" cols="48" rows="30">
                 <% out.println("\n" + symptom + "\n" + photo + "\n" + detail + "\n" + date);%>
                 </textarea>
             </section>
