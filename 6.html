@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
     <style>
         *{
             margin: 0; padding: 0;
         }
-        html, body{
+        /*html, body{
             height: 100%;
             min-height: 100%;
-        }
+        }*/
         
         body {
             display: flex;
             flex-direction: column;
         }
-
+        
         header, footer {
             flex: none;
         }
         
         header{
             background-color: rgb(206, 207, 212);
-            position: fixed;
-            height:100px;
             width: 100%;
             overflow: hidden;
             border-bottom-left-radius: 10px;
@@ -38,7 +39,7 @@
         }
 
         main{
-            margin-top: 90px;
+            /*margin-top: 10%;*/
             text-align: center;                                  
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
@@ -52,7 +53,7 @@
         }
         #com_img{
             float: left;
-            width: 300px;
+            width: 50%;
         }
         table{
             border: 1px solid #444444;
@@ -83,11 +84,6 @@
         #request{
             text-align: left;
         }
-        h1, h2, p{
-            font-size: 200%;
-            line-height: 200%;
-            letter-spacing: 1px;
-        }
        
 
         footer{
@@ -112,7 +108,7 @@
             height:100%;
         }
         #foot{
-            width:19%;
+            width:18%;
         }
     </style>
 </head>
@@ -127,8 +123,8 @@
         <section>
             <table>
                 <colgroup> 
-                    <col style="width:300px">
-                    <col>
+                    <col style="width:60%">
+                    <col style="width:40%">
                 </colgroup>
                 <tr>
                     <td rowspan="2"><img src="images/icon.png" alt="업체" id="com_img"></td>
@@ -142,22 +138,21 @@
 
         <section style="text-align: left;">
             <h1>진행상황</h1>
-            <br>
             <div id="bar">
                 <progress id="progress" value="80" max="100"></progress>
             </div>
             <div id="bar2">
                 <div id="bar_text1">
-                    <p>접수중</p>
+                    <p style="font-size: 90%;">접수중</p>
                 </div>
                 <div id="bar_text2">
-                    <p>수리중</p> 
+                    <p style="font-size: 90%;">수리중</p> 
                 </div>
                 <div id="bar_text3">
-                    <p>수리완료</p> 
+                    <p style="font-size: 90%;">수리완료</p> 
                 </div>
                 <div id="bar_text4">
-                    <p>배송완료</p>
+                    <p style="font-size: 90%;">배송완료</p>
                 </div>
             </div>
             
