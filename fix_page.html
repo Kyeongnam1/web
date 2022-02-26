@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
     <style>
         *{
             margin: 0; padding: 0;
-        }
-        html, body{
-            height: 100%;
-            min-height: 100%;
         }
         
         body {
@@ -23,8 +22,6 @@
         
         header{
             background-color: rgb(206, 207, 212);
-            position: fixed;
-            height:100px;
             width: 100%;
             overflow: hidden;
             border-bottom-left-radius: 10px;
@@ -38,7 +35,6 @@
         }
 
         main{
-            margin-top: 90px;
             text-align: center;
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
@@ -48,11 +44,11 @@
         }
         section{
             text-align: center;
-            margin: 50px;
+            margin: 30px;
         }
         #com_img{
             float: left;
-            width: 300px;
+            width: 50%;
         }
         table{
             border: 1px solid #444444;
@@ -68,13 +64,10 @@
             margin:0px;
             padding:0px;
         }
-        /* #nav{
-            position: sticky;
-            top:10px;
-        } */
         #menu{
             border-radius: 25px;
             background-color: rgb(206, 207, 212);
+            line-height: 300%;
         }
         #menu ul{
             width: 100%;
@@ -83,8 +76,6 @@
         #menu ul li{
             float:left;
             width:33.33%;
-            height: 100px;
-            line-height: 100px;;
             text-align: center;
             list-style: none;
         }
@@ -94,12 +85,7 @@
         #text{
             text-align: left;
         }
-        h1, h2, p{
-            font-size: 200%;
-            line-height: 200%;
-            letter-spacing: 1px;
-        }
-
+    
         footer{
             background-color: rgb(206, 207, 212);
             border-top-left-radius: 10px;
@@ -134,8 +120,8 @@
         <section>
             <table>
                 <colgroup> 
-                    <col style="width:300px">
-                    <col>
+                    <col style="width:60%">
+                    <col style="width:40%">
                 </colgroup>
                 <tr>
                     <td rowspan="3"><img src="images/icon.png" alt="업체" id="com_img"></td>
@@ -153,9 +139,9 @@
         <section id="nav">
             <nav id="menu">
                 <ul>
-                    <li><a onclick="hideshow1()">업체정보</a></li>
-                    <li><a onclick="hideshow2()">리뷰</a></li>
-                    <li><a onclick="hideshow3()">QnA</a></li>
+                    <a onclick="hideshow1()"><li>업체정보</li></a>
+                    <a onclick="hideshow2()"><li>리뷰</li></a>
+                    <a onclick="hideshow3()"><li>QnA</li></a>
                 </ul>
             </nav>
         </section>
@@ -175,7 +161,7 @@
                 <hr>
                 <br>
                 <div id="wholerate">
-                    <h1 style="font-size: 400%; display:inline;">5.0</h1><p style="display:inline;">&nbsp;&nbsp;⭐⭐⭐⭐⭐</p>
+                    <h1 style="font-size: 250%; display:inline;">5.0</h1><p style="display:inline;">&nbsp;&nbsp;⭐⭐⭐⭐⭐</p>
                 </div>
                 <hr>
                 <br>
@@ -205,22 +191,6 @@
     </footer>
 </body>
 <script>
-    /*
-    var c = doucument.querySelector("qna");
-    c.addEventListener("click",scrollWindow2);
-
-    function click(){
-        var location = document.querySelector("#qna").offsetTop;
-        window.scrollTo({top:location, behavior:'smooth'});
-    }
-    function scrollWindow2()
-    {
-        window.scrollTo(0,1500);
-    }
-
-    var moveToTopSmooth = function() {
-    document.body.scrollIntoView({ behavior: 'smooth' });
-    };*/
 
     function hideshow1(){
         document.getElementById("information").style.display = "block";
